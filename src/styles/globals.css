@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Bona+Nova:wght@400;700&family=Galada&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600&display=swap");
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: #fcffeb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  width: fit-content;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

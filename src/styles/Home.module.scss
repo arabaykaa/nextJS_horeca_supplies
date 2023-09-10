@@ -1,0 +1,313 @@
+@import "./mixins";
+
+//Main photo styles
+.imageStyleForMainPhoto {
+  width: 100%;
+  height: auto;
+}
+
+.mainPhotoContainer {
+  width: 100%;
+  top: 0;
+  height: 99.3%;
+  position: absolute;
+}
+
+.mainPhotoHeader_conainer {
+  padding: 2%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainPhotoRectanglesPhoto {
+  width: 95%;
+  bottom: 0;
+  height: auto;
+  right: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.mainPhotoTitle {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  color: white;
+  @include adaptive_font(60, 22);
+  background-color: rgba(224, 124, 56, 0.5);
+  width: 100%;
+  font-family: "Bona Nova", serif;
+}
+
+//Logo styles
+
+.logo_container {
+  background: rgba(255, 255, 255, 0.19);
+  padding: 10px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  font-family: "Galada", cursive;
+  width: fit-content;
+}
+
+.logo {
+  @include adaptive_image(121, 56);
+  height: auto;
+}
+
+.logoTitle1 {
+  color: rgb(244, 101, 0);
+  @include adaptive_font(40, 20);
+}
+.logoTitle2 {
+  color: white;
+  @include adaptive_font(40, 20);
+  margin-top: -25px;
+  padding-left: 15px;
+}
+
+@media (max-width: 768px) {
+  .logoTitle2 {
+    margin-top: -13px;
+  }
+}
+
+//Text photo styles
+
+.containerTextPhoto {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-around;
+  align-items: center;
+  gap: 12px;
+  color: rgba(108, 0, 0, 1);
+  padding: 60px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .containerTextPhoto {
+    flex-direction: column;
+    padding: 15px;
+  }
+}
+
+.textPhotoImageStyle {
+  @include adaptive_image(650, 256);
+  @include adaptive_image_height(290, 157);
+  z-index: 9;
+  height: auto;
+}
+
+.textPhotoRectangles {
+  height: auto;
+  width: 30%;
+  position: absolute;
+  top: -1.2%;
+  left: 0;
+  z-index: 0;
+}
+
+.textPhotoTextStyle {
+  z-index: 9;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  @include adaptive_font(20, 12);
+}
+
+.textPhotoTitleStyle {
+  z-index: 10;
+  position: relative;
+  font-family: "Bona Nova", serif;
+  font-weight: bold;
+  @include adaptive_font(45, 22);
+  text-align: center;
+}
+
+//Change lang style
+
+.flagsContainer {
+  background: rgba(217, 217, 217, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 0 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 5px 9px;
+  gap: 0.5rem;
+  height: fit-content;
+}
+
+.flagsStyle {
+  @include adaptive_image(50, 20);
+  height: auto;
+  cursor: pointer;
+  &:hover {
+    scale: 1.04;
+  }
+}
+
+// Contact us styles
+
+.containerContact {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 70px;
+}
+
+.whatsappContainer {
+  width: fit-content;
+  border: 1px solid rgba(108, 0, 0, 1);
+  border-radius: 88px;
+  background: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  &:hover {
+    scale: 1.01;
+  }
+}
+
+.watsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 50%;
+}
+
+.titleContact {
+  font-family: "Bona Nova", serif;
+  font-weight: bold;
+  @include adaptive_font(36, 18);
+  text-align: center;
+  color: rgba(108, 0, 0, 1);
+}
+
+.textContact {
+  font-family: "Bona Nova", serif;
+  font-weight: bold;
+  text-align: center;
+  @include adaptive_font(28, 16);
+  color: rgba(108, 0, 0, 1);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  padding-right: 25px;
+}
+
+@media (max-width: 768px) {
+  .containerContact {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .watsapp {
+    padding: 10px;
+  }
+}
+
+//Info styles
+
+.containerInfo {
+  padding: 40px 130px 60px 130px;
+}
+
+@media (max-width: 768px) {
+  .containerInfo {
+    padding: 20px 20px 30px 20px;
+  }
+}
+
+.titleInfo {
+  font-family: "Bona Nova", serif;
+  font-weight: bold;
+  @include adaptive_font(45, 22);
+  text-align: center;
+  color: rgba(108, 0, 0, 1);
+}
+
+.textInfo {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  @include adaptive_font(24, 12);
+  color: rgba(108, 0, 0, 1);
+}
+
+// Footer styles
+
+.footerContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: "Bona Nova", serif;
+  @include adaptive_font(20, 13);
+  margin: 2rem 0;
+}
+
+.iconsSize {
+  width: auto;
+}
+
+.fourLinksContainer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.linksContainer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.tagA {
+  display: flex;
+  align-items: center;
+  color: #6c0000;
+  gap: 10px;
+  &:hover {
+    color: rgba(180, 80, 13, 0.8);
+  }
+}
+
+.linksContainerBig {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .fourLinksContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 400px) {
+  .linksContainerBig {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .linksContainer {
+    flex-direction: column;
+    padding: 0 10%;
+    gap: 1rem;
+  }
+  .linksContainerBig {
+    flex-direction: column;
+    padding: 0 10%;
+  }
+  .iconsSize {
+    width: 30px;
+  }
+}
